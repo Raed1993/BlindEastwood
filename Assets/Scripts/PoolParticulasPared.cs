@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoolParticulasPared : MonoBehaviour {
 
 	private int particleDecalDataIndex;
-	public int
+	/*public int
 	// Use this for initialization
 	void Start () {
 		
@@ -14,5 +14,5 @@ public class PoolParticulasPared : MonoBehaviour {
 	void setParticleData(ParticleCollisionEvent particleCollisionEvent){
 		//record collision,position,rotation,size and color
 		if(particleDecalDataIndex>)
-	}
+	}*/
 }

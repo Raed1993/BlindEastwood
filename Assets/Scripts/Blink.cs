@@ -7,7 +7,7 @@ public class Blink : MonoBehaviour {
 
 	bool isShowing;
 	bool isInTransition;
-	float duration;
+	public float duration=0.4f;
 	float transition;
 	Material thisMaterial;
 	// Use this for initialization
@@ -17,7 +17,7 @@ void Start(){
 		
 	}
 	public void doFadeWhenGetHit(){
-		Fade(true,0.4f);
+		Fade(true,duration);
 	}
 	public void Fade(bool showing,float duration){
 		isShowing=showing;
@@ -41,6 +41,18 @@ void Start(){
 		if(transition>1 || transition<0){
 			isInTransition=false;
 			isShowing=false;
+		}
+	}
+
+	void OnCollisionEnter(Collision e){
+		Debug.Log("hola");
+		if(e.gameObject.tag=="Player"){
+			Fade(true,duration);
+		}
+	}
+	void OnCollisionStay(Collision e){
+		if(e.gameObject.tag=="Player"){
+			Fade(true,duration);
 		}
 	}
 }

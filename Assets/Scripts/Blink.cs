@@ -16,7 +16,7 @@ void Start(){
 		thisMaterial.color=new Color(1,1,1,0);
 		
 	}
-	public void doFadeWhenGetHit(){
+	public void DoFadeWhenGetHit(){
 		Fade(true,duration);
 	}
 	public void Fade(bool showing,float duration){
@@ -28,7 +28,7 @@ void Start(){
 
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.E)){
-			doFadeWhenGetHit();
+			DoFadeWhenGetHit();
 		}
 		if(!isInTransition){
 			thisMaterial.color=new Color(1,1,1,0);
@@ -44,15 +44,16 @@ void Start(){
 		}
 	}
 
-	void OnCollisionEnter(Collision e){
+	void OnTriggerEnter(Collider e){
 		Debug.Log("hola");
 		if(e.gameObject.tag=="Player"){
 			Fade(true,duration);
 		}
 	}
-	void OnCollisionStay(Collision e){
+	void OnTriggerStay(Collider e){
 		if(e.gameObject.tag=="Player"){
 			Fade(true,duration);
 		}
 	}
+
 }

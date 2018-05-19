@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 3fd83d6e422294647beb51612c51b0ae
+guid: 7a3595a38c24c0140b3eb17cb5566904
+timeCreated: 1526756255
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 01 - Default
+    2100000: Material PC
     2300000: //RootNode
     3300000: //RootNode
-    4300000: objpolySurface2
+    4300000: PC
     9500000: //RootNode
   externalObjects: {}
   materials:

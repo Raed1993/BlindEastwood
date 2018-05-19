@@ -43,6 +43,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         // Use this for initialization
+
+        public float maxPerceptionDistance=5;
+
+        public float getPerceptionMultiplier(Vector3 enemyPosition){
+            float distanceBetween=Mathf.Abs(Vector3.Distance(this.transform.position,enemyPosition));
+            if(distanceBetween>maxPerceptionDistance){
+                return 0f;
+            }else{
+                return 1-distanceBetween/maxPerceptionDistance;
+            }
+        }
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();

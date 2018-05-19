@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ea364c79f11c1d34a8d8acd606872ec6
-timeCreated: 1526730973
+guid: 2f55851bf37398c4081d8d733357b436
+timeCreated: 1526738857
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -123,11 +123,12 @@ ModelImporter:
     400112: mixamorig:Spine1
     400114: mixamorig:Spine2
     400116: Realistic_White_Male_Low_Poly
-    2100000: BodyEnitre
-    2100002: Foot1
-    2100004: "PechoCora\xE7ao"
-    2100006: Foot2
+    2100000: cuerpo_mat
+    2100002: 'Material #31'
+    2100004: Pecholuminoso
+    2100006: 'Material #44'
     4300000: Realistic_White_Male_Low_Poly
+    7400000: Take 001
     9500000: //RootNode
     13700000: Realistic_White_Male_Low_Poly
   externalObjects: {}

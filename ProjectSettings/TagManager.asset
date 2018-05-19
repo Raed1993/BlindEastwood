@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Moneda
+  - Ground
   - Sound
   - NoiseCenter
+  - Moneda
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Coin
+  - Player
   - 
   - 
   - 

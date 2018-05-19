@@ -49,8 +49,12 @@ public class Enemy : MonoBehaviour {
 
         if (other.tag == "Sound")
         {
-            Vector3 direction = transform.position - other.transform.GetChild(0).position;
-           
+            transform.LookAt(other.transform);
+            CancelInvoke();
+            navMeshAgent.isStopped = true;
+            MoveToPosition(other.transform.GetChild(0).position);
+
+
         }
     }
 
@@ -62,7 +66,7 @@ public class Enemy : MonoBehaviour {
             CancelInvoke();
             navMeshAgent.isStopped = false;
             Debug.Log("Sale: " + other.tag);
-            InvokeRepeating("move", 0, waitForMove);
+            InvokeRepeating("Move", 0, waitForMove);
         }
     }
 
@@ -81,9 +85,11 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    void MoveToPosition()
+    void MoveToPosition(Vector3 position)
     {
-
+        navMeshAgent.isStopped = false;
+        navMeshAgent.destination = position;
+        InvokeRepeating("Move", 0, waitForMove);
     }
     void Attack()
     {

@@ -85,6 +85,7 @@ public class Enemy : MonoBehaviour {
 
     void MoveToPosition(Vector3 position)
     {
+        navMeshAgent.isStopped = false;
         navMeshAgent.destination = position;
         InvokeRepeating("move", 0, waitForMove);
     }

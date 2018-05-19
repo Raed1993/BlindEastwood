@@ -416,7 +416,7 @@ Prefab:
     - target: {fileID: 195288712037354072, guid: 664d48038fea84f448d178b73a4ce6c0,
         type: 2}
       propertyPath: m_Speed
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 195288712037354072, guid: 664d48038fea84f448d178b73a4ce6c0,
         type: 2}
@@ -769,6 +769,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4976855596347368, guid: be33d5fc7a8e4314fbf087eb070a7c1e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.7418683
@@ -801,6 +806,56 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_WalkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_RunSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_RunstepLenghten
+      value: 0.312
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_JumpSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_StickToGroundForce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_GravityMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+    - target: {fileID: 114516924253903176, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
+        type: 2}
+      propertyPath: m_FootstepSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be33d5fc7a8e4314fbf087eb070a7c1e, type: 2}
   m_IsPrefabParent: 0

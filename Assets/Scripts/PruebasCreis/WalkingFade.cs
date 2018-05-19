@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityStandardAssets.Characters.FirstPerson;
 public class WalkingFade : MonoBehaviour {
 
 	public float duration = 0.01f;
@@ -9,14 +9,16 @@ public class WalkingFade : MonoBehaviour {
     public Material material;
     public int alphaFade;
 
-
+	public FirstPersonController controller;
+    private GameObject player;
 
 	// Use this for initialization
     void Start()
     {	
         material = GetComponent<Renderer>().materials[0];
-        //InvokeRepeating("Fade", duration, duration);
         Debug.Log(GetComponent<Renderer>().materials[0].name);
+		player=GameObject.FindWithTag("Player");
+        controller=player.GetComponent<FirstPersonController>();
     }
 
     public void FadeWalking()
@@ -25,13 +27,13 @@ public class WalkingFade : MonoBehaviour {
     }
 	void Fade(){
 		Debug.Log("Llamado");
-        material.color = Color.Lerp(material.color, new Color(1, 1, 1, alphaFade), transition);
-        if (material.color.a > 0.9f)
+        material.color = Color.Lerp(material.color, new Color(1, 1, 1,controller.getPerceptionMultiplier(this.transform.position)*alphaFade), transition);
+        if (material.color.a > 0.8f)
         {
             alphaFade = 0;
         }
 
-        if (material.color.a < 0.2f)
+        if (material.color.a < 0.1f)
         {
             alphaFade=1;
 			CancelInvoke();

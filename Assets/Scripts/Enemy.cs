@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour {
             CancelInvoke();
             navMeshAgent.isStopped = false;
             Debug.Log("Sale: " + other.tag);
-            InvokeRepeating("move", 0, waitForMove);
+            InvokeRepeating("Move", 0, waitForMove);
         }
     }
 
@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour {
     {
         navMeshAgent.isStopped = false;
         navMeshAgent.destination = position;
-        InvokeRepeating("move", 0, waitForMove);
+        InvokeRepeating("Move", 0, waitForMove);
     }
     void Attack()
     {

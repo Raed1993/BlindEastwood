@@ -10,6 +10,6 @@ public class Noise : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         GameObject auxNoise = Instantiate(noise, collision.contacts[0].point, noise.transform.rotation);
-        auxNoise.GetComponent<SphereCollider>().radius = collision.impulse.sqrMagnitude / radiusSoundToImpact;
+        auxNoise.GetComponent<SphereNoise>().maxSize = collision.impulse.sqrMagnitude / radiusSoundToImpact;
     }
 }

@@ -48,6 +48,11 @@ public class Enemy : MonoBehaviour {
             navMeshAgent.isStopped=true;
             Attack();
         }
+
+        if (other.tag == "Sound")
+        {
+            Debug.Log("Noise");
+        }
     }
 
     void OnTriggerExit(Collider other)

@@ -16,7 +16,6 @@ public class BlinkHearth : MonoBehaviour {
     {
         material = GetComponent<Renderer>().material;
         InvokeRepeating("Fade", duration, duration);
-        Debug.Log(GetComponent<Renderer>().material.name);
         player=GameObject.FindWithTag("Player");
         controller=player.GetComponent<FirstPersonController>();
     }

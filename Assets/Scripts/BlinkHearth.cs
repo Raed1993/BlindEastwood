@@ -7,9 +7,6 @@ public class BlinkHearth : MonoBehaviour {
     public float duration = 0.1f;
     float transition = 0.1f;
     public Material material;
-
-    bool isShowing;
-	bool isInTransition;
     public int alphaFade;
 
 	// Use this for initialization

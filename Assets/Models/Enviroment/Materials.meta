@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/Enviroment/Materials.meta
 guid: bc89f0471d6644147b7480345b5928a9
 folderAsset: yes
 timeCreated: 1526736874
+=======
+guid: be98c9660ffb0ec4da3060054fc7f15a
+folderAsset: yes
+timeCreated: 1526736378
+>>>>>>> bc37a84c747c8823522b8dc551f6c898895aa528:Assets/Models/Enviroment/Materials.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

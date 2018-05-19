@@ -16351,6 +16351,11 @@ Prefab:
       propertyPath: m_Name
       value: door1
       objectReference: {fileID: 0}
+    - target: {fileID: 54116955702169028, guid: 530d8aba5f04d1e4dbab06436e47cb90,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530d8aba5f04d1e4dbab06436e47cb90, type: 2}
   m_IsPrefabParent: 0

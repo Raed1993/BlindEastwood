@@ -7,6 +7,8 @@ TagManager:
   - Sound
   - Moneda
   - Ground
+  - Interruptor
+  - Door
   layers:
   - Default
   - TransparentFX

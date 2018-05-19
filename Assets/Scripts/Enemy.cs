@@ -52,7 +52,9 @@ public class Enemy : MonoBehaviour {
             transform.LookAt(other.transform);
             CancelInvoke();
             navMeshAgent.isStopped = true;
-           
+            MoveToPosition(other.transform.GetChild(0).position);
+
+
         }
     }
 

@@ -29,6 +29,7 @@ public class Blink : MonoBehaviour {
             InvokeRepeating("Fade", duration, duration);
         }
 	}
+
     void OnTriggerExit(Collider e)
     {
         transition = transitionOut;

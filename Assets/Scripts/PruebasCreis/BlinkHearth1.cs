@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlinkHearth1 : MonoBehaviour {
 
     public float duration = 0.1f;
-    float transition = 0.1f;
+    public float transition = 0.1f;
     public Material thisMaterial;
 
     bool isShowing;
@@ -40,5 +40,9 @@ public class BlinkHearth1 : MonoBehaviour {
         {
             alphaFade = 1;
         }
+    }
+
+    void OnApplicationQuit(){
+        this.gameObject.GetComponent<Renderer>().material.SetColor("_Color",new Color(255,255,255,0));
     }
 }

@@ -4,56 +4,49 @@ using UnityEngine;
 
 public class Blink : MonoBehaviour {
 
+    public float duration = 0.4f;
+    public float transitionIn;
+    public float transitionOut;
 
-	bool isShowing;
+    bool isShowing;
 	bool isInTransition;
-	public float duration=0.4f;
-	float transition;
+    int alphaFade;
+    float transition;
 	Material thisMaterial;
 	// Use this for initialization
-void Start(){
+    void Start()
+    {
 		thisMaterial=this.GetComponent<MeshRenderer>().material;
 		thisMaterial.color=new Color(1,1,1,0);
 		
 	}
-	public void DoFadeWhenGetHit(){
-		Fade(true,duration);
-	}
-	public void Fade(bool showing,float duration){
-		isShowing=showing;
-		isInTransition=true;
-		this.duration=duration;
-		transition=(isShowing) ? 0 : 1;
-	}
-
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.E)){
-			DoFadeWhenGetHit();
-		}
-		if(!isInTransition){
-			thisMaterial.color=new Color(1,1,1,0);
-			return;
-		}
-		
-		transition+= (isShowing) ? Time.deltaTime*(1/duration) : -Time.deltaTime*(1/duration);
-		thisMaterial.color=Color.Lerp(thisMaterial.color,new Color(1,1,1,1),transition);
-
-		if(transition>1 || transition<0){
-			isInTransition=false;
-			isShowing=false;
-		}
-	}
 
 	void OnTriggerEnter(Collider e){
-		Debug.Log("hola");
+        transition = transitionIn;
+        alphaFade = 1;
+        Debug.Log("hola");
 		if(e.gameObject.tag=="Player"){
-			Fade(true,duration);
-		}
-	}
-	void OnTriggerStay(Collider e){
-		if(e.gameObject.tag=="Player"){
-			Fade(true,duration);
-		}
+            InvokeRepeating("Fade", duration, duration);
+        }
 	}
 
+    void OnTriggerExit(Collider e)
+    {
+        transition = transitionOut;
+        alphaFade = 0;
+        Debug.Log("adios");
+        if (e.gameObject.tag == "Player")
+        {
+            InvokeRepeating("Fade", duration, duration);
+        }
+    }
+
+    void Fade()
+    {
+        thisMaterial.color = Color.Lerp(thisMaterial.color, new Color(1, 1, 1, alphaFade), transition);
+        if (thisMaterial.color.a == alphaFade)
+        {
+            CancelInvoke();
+        }
+    }
 }

@@ -11,25 +11,24 @@ public class BlinkHearth : MonoBehaviour {
     bool isShowing;
 	bool isInTransition;
     public int alphaFade;
-    private Color color;
-
 
 	// Use this for initialization
     void Start()
     {
-        color = material.GetColor("Tint Color");
+        material = GetComponent<Renderer>().materials[1];
         InvokeRepeating("Fade", duration, duration);
+        Debug.Log(GetComponent<Renderer>().materials[1].name);
     }
 
     void Fade()
     {
-        color = Color.Lerp(color, new Color(1, 1, 1, alphaFade), transition);
-        if (color.a > 0.8f)
+        material.color = Color.Lerp(material.color, new Color(1, 1, 1, alphaFade), transition);
+        if (material.color.a > 0.8f)
         {
             alphaFade = 0;
         }
 
-        if (color.a < 0.2f)
+        if (material.color.a < 0.2f)
         {
             alphaFade = 1;
         }

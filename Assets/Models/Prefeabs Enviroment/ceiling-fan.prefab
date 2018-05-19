@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33402532122933512}
   - component: {fileID: 23917037683197624}
   - component: {fileID: 114077326333676426}
+  - component: {fileID: 65686472408501498}
   m_Layer: 0
   m_Name: ceiling-fan
   m_TagString: Untagged
@@ -35,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370146481105604}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 2.56, y: 3.29, z: 3.28}
-  m_LocalScale: {x: 33.11367, y: 33.11367, z: 33.11367}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -17.61, y: 24.985443, z: -41.95438}
+  m_LocalScale: {x: 25.80731, y: 25.807281, z: 25.807281}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370146481105604}
   m_Mesh: {fileID: 4300000, guid: 4dfd340ac24081a46939546c48b88123, type: 3}
+--- !u!65 &65686472408501498
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370146481105604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10554389, y: 0.09979955, z: 0.054345176}
+  m_Center: {x: -0.0000021617889, y: -0.0032018507, z: 0.01208482}
 --- !u!114 &114077326333676426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2a3fa12bf4e014eb48941f8b3c2b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}

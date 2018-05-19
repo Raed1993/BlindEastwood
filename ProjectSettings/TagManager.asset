@@ -7,7 +7,12 @@ TagManager:
   - Sound
   - Moneda
   - Ground
+<<<<<<< HEAD
   - NoiseCenter
+=======
+  - Interruptor
+  - Door
+>>>>>>> f810a94901d22c63083063067dafc9e2d4af5fca
   layers:
   - Default
   - TransparentFX

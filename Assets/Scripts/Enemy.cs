@@ -36,17 +36,21 @@ public class Enemy : MonoBehaviour {
 
 
 
-
-
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entra: " + other.tag);
+
         if (other.tag == "Player")
         {
             transform.LookAt(other.transform);
             CancelInvoke();
-            navMeshAgent.isStopped=true;
+            navMeshAgent.isStopped = true;
             Attack();
+        }
+
+        if (other.tag == "Sound")
+        {
+            Vector3 direction = transform.position - other.transform.GetChild(0).position;
+           
         }
     }
 
@@ -77,6 +81,10 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    void MoveToPosition()
+    {
+
+    }
     void Attack()
     {
         Debug.Log("Muriste");

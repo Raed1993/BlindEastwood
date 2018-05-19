@@ -6,6 +6,7 @@ public class FootWalkingFade : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject body;
+    public string footString;
 
 	
 
@@ -14,8 +15,7 @@ public class FootWalkingFade : MonoBehaviour {
 		
 		if (e.gameObject.transform.tag == "Ground")
         {
-			Debug.Log("pie");
-			body.BroadcastMessage("FadeWalking");
+			body.BroadcastMessage(footString);
 		}
 	}
 }

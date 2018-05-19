@@ -4,15 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Sound
-  - Moneda
   - Ground
-<<<<<<< HEAD
+  - Sound
   - NoiseCenter
-=======
+  - Moneda
   - Interruptor
   - Door
->>>>>>> f810a94901d22c63083063067dafc9e2d4af5fca
   layers:
   - Default
   - TransparentFX

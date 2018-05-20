@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	static public GameManager instance;
 	public int enemies;
 	private int totalEnemies;
+	private UIManager uiManager;
 	// Use this for initialization
 	void Awake () 
 	{
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour {
 	{
 		totalEnemies = enemies;
 		Time.timeScale=1;
+		uiManager = GetComponent<UIManager> ();
 	}
 
     // Update is called once per frame
@@ -38,15 +40,20 @@ public class GameManager : MonoBehaviour {
 		}
 		if (enemies <= 0)
 		{
-			EndGame ("\"You WIN!!!!\"");
+			Invoke ("win", 2f);
 
 		}
 	}
 
 	public void EndGame(string text)
 	{
+		uiManager.EndGame (text);
 		Debug.Log(text);
-		Time.timeScale = 0;
+
 	}
-	
+
+	void win()
+	{
+		EndGame ("YOU WIN!!!");
+	}
 }

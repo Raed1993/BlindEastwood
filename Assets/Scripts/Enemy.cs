@@ -93,6 +93,6 @@ public class Enemy : MonoBehaviour {
     }
     void Attack()
     {
-        Debug.Log("Muriste");
+		GameManager.instance.EndGame("Muriste");
     }
 }

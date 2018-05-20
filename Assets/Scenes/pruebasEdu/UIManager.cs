@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,8 +12,10 @@ public class UIManager : MonoBehaviour
     public GameObject panelExit;
     public GameObject panelDialogue;
     public GameObject panelTitle;
+	public GameObject endGameCanvas;
     public Text textDialogue;
     public Canvas canvasIntro;
+	public Text textEndGame;
     private CanvasGroup canvasGroupIntro;
     private CanvasGroup canvasGroupDialogue;
     private GameObject player;
@@ -21,6 +24,7 @@ public class UIManager : MonoBehaviour
     private int i;
     private bool dialogueCompleted = false;
     private bool gameStarted = false;
+	private bool endGameFading = false;
 
     // Use this for initialization
     void Start()
@@ -32,6 +36,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         canvasGroupIntro = canvasIntro.GetComponent<CanvasGroup>();
         canvasGroupDialogue = panelDialogue.GetComponent<CanvasGroup>();
+
         
     }
 
@@ -43,8 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void NEWGAME()
     {
-        
-        gameStarted = true;
+		gameStarted = true;
         firstPersonController.enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -117,6 +121,33 @@ public class UIManager : MonoBehaviour
         canvasGroupDialogue.alpha -= Mathf.Lerp(1, 0, 0.9f);
         if (canvasGroupDialogue.alpha == 0) panelDialogue.SetActive(true);
     }
+
+	public void EndGame(string text)
+	{
+		if (endGameFading == false)
+		{
+			firstPersonController.enabled = false;
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+			endGameCanvas.SetActive (true);
+			textEndGame.text = text;
+			Time.timeScale = 0.01f;
+			InvokeRepeating ("FadeEndgame", 0.0005f, 0.0005f);
+		}
+	}
+
+	private void FadeEndgame()
+	{
+		endGameFading = true;
+		endGameCanvas.GetComponent<CanvasGroup> ().alpha += Mathf.Lerp (1, 0, 0.9f);
+	}
+
+	public void Reset()
+	{
+		Debug.Log("RESETEO");
+		Time.timeScale = 1;
+		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+	}
 }
 
 

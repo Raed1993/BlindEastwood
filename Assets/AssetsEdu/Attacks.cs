@@ -6,7 +6,7 @@ public class Attacks : MonoBehaviour
 {
 	public GameObject porraDamage;
     public float thrust;
-    public float coinCounter = 3f;
+    public int coinCounter = 50;
     public GameObject coin;
     public GameObject coinPos;
     private GameObject copy_coin;
@@ -30,12 +30,12 @@ public class Attacks : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetMouseButtonDown(0))
         {
             animatorTest.SetTrigger("Attack");
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetMouseButtonDown(1))
         {
             if (coinCounter > 0 && canAttack)
             {
@@ -44,11 +44,6 @@ public class Attacks : MonoBehaviour
                 meshRendererCoin.enabled = true;
                 animatorTest.SetTrigger("CoinThrow");
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            coinCounter = 3;
         }
 
     }

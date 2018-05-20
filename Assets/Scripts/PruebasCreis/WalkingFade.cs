@@ -29,45 +29,24 @@ public class WalkingFade : MonoBehaviour
     {
         InvokeRepeating("Fade", duration, duration);
     }
-    void FadeWalkLeft()
-    {
-        InvokeRepeating("FadeLeft", duration, duration);
-    }
 
-    void FadeWalkRigth()
-    {
-        InvokeRepeating("FadeRigth", duration, duration);
-    }
+	void Fade()
+	{
+		material.color = Color.Lerp(materialRigth.color, new Color(1, 1, 1, controller.getPerceptionMultiplier(this.transform.position) * alphaFade), transition);
+		materialRigth.color= material.color;
+		materialLeft.color = material.color;
+		if (material.color.a > 0.8f)
+		{
+			alphaFade = 0;
+		}
 
-    void FadeLeft()
-    {
-        materialLeft.color = Color.Lerp(materialLeft.color, new Color(1, 1, 1, controller.getPerceptionMultiplier(this.transform.position) * alphaFade), transition);
-        if (materialLeft.color.a > 0.8f)
-        {
-            alphaFade = 0;
-        }
-
-        if (materialLeft.color.a < 0.1f)
-        {
-            materialLeft.color = new Color(1,1,1,0);
-            alphaFade = 1;
-            CancelInvoke("FadeLeft");
-        }
-    }
-
-    void FadeRigth()
-    {
-        materialRigth.color = Color.Lerp(materialRigth.color, new Color(1, 1, 1, controller.getPerceptionMultiplier(this.transform.position) * alphaFade), transition);
-        if (materialRigth.color.a > 0.8f)
-        {
-            alphaFade = 0;
-        }
-
-        if (materialRigth.color.a < 0.1f)
-        {
-            materialRigth.color = new Color(1, 1, 1, 0);
-            alphaFade = 1;
-            CancelInvoke("FadeRigth");
-        }
-    }
+		if (material.color.a < 0.1f)
+		{
+			material.color = new Color(1, 1, 1, 0);
+			materialRigth.color= new Color(1, 1, 1, 0);
+			materialLeft.color = new Color(1, 1, 1, 0);
+			alphaFade = 1;
+			CancelInvoke("Fade");
+		}
+	}
 }

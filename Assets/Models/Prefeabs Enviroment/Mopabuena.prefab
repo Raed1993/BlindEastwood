@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 23666187528685448}
   - component: {fileID: 65910529868609370}
   - component: {fileID: 65174840276530196}
-  - component: {fileID: 114948095624135484}
+  - component: {fileID: 114310988246861192}
   m_Layer: 0
   m_Name: ChamferBox01
   m_TagString: Untagged
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 23841010661421712}
   - component: {fileID: 65356563964820930}
   - component: {fileID: 65686451076861464}
-  - component: {fileID: 114284488189314332}
+  - component: {fileID: 114754513781954990}
   m_Layer: 0
   m_Name: broom handle
   m_TagString: Untagged
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 23206937518929572}
   - component: {fileID: 65233254702908930}
   - component: {fileID: 65263197786999258}
-  - component: {fileID: 114718854724217576}
+  - component: {fileID: 114295603903207932}
   m_Layer: 0
   m_Name: Box001
   m_TagString: Untagged
@@ -107,8 +107,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071765309238930}
   m_LocalRotation: {x: -0.79213905, y: -0, z: -0, w: 0.61034065}
-  m_LocalPosition: {x: 165.099, y: 206.671, z: -60.999}
-  m_LocalScale: {x: 15.479364, y: 15.479364, z: 15.479364}
+  m_LocalPosition: {x: 154.64108, y: 205.92519, z: -55.465046}
+  m_LocalScale: {x: 15.479364, y: 15.4793625, z: 15.4793625}
   m_Children:
   - {fileID: 4417583136826312}
   - {fileID: 4067518089247774}
@@ -354,21 +354,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114284488189314332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1757519937228532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.1
-  transitionIn: 0.1
-  transitionOut: 0.01
---- !u!114 &114718854724217576
+--- !u!114 &114295603903207932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -376,13 +362,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942463504361720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1
   transitionIn: 0.1
   transitionOut: 0.01
---- !u!114 &114948095624135484
+--- !u!114 &114310988246861192
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -390,7 +376,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408940423297012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+  transitionIn: 0.1
+  transitionOut: 0.01
+--- !u!114 &114754513781954990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757519937228532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1

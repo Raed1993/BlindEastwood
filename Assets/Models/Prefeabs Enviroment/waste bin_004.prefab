@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95908533807352452}
   - component: {fileID: 65913105365986380}
   - component: {fileID: 65186214285789732}
-  - component: {fileID: 114080910905713726}
+  - component: {fileID: 114744144071852620}
   m_Layer: 0
   m_Name: waste bin_004
   m_TagString: Untagged
@@ -38,9 +38,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068026516651856}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 12.1, y: -0, z: -6.782}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.6236, y: -0.76982, z: -1.2480459}
+  m_LocalScale: {x: 0.04753607, y: 0.05000003, z: 0.05000003}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.265018, y: 21.253819, z: 21.14654}
-  m_Center: {x: -0.009946823, y: -0.9478607, z: 10.573267}
+  m_Size: {x: 19.948196, y: 22.561451, z: 21.14654}
+  m_Center: {x: 0.83164215, y: -0.29404756, z: 10.573267}
 --- !u!65 &65913105365986380
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -127,7 +127,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114080910905713726
+--- !u!114 &114744144071852620
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068026516651856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1

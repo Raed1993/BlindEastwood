@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23193717873286104}
   - component: {fileID: 65586133445569802}
   - component: {fileID: 65131444446604884}
-  - component: {fileID: 114459954199237354}
+  - component: {fileID: 114805396033065242}
   m_Layer: 0
   m_Name: cube1
   m_TagString: Untagged
@@ -52,9 +52,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1628849579516520}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 21.754, y: 0.297, z: 32.698}
-  m_LocalScale: {x: 5.043615, y: 5.0436125, z: 5.0436125}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -18.944124, y: 2.9624388, z: 11.566479}
+  m_LocalScale: {x: 5.043617, y: 5.0436125, z: 5.0436144}
   m_Children:
   - {fileID: 4804561350184998}
   m_Father: {fileID: 0}
@@ -139,7 +139,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40036947, y: 0.4528, z: 0.32069063}
   m_Center: {x: -0.012677182, y: 0, z: 0.042318236}
---- !u!114 &114459954199237354
+--- !u!114 &114805396033065242
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1010314152320236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1

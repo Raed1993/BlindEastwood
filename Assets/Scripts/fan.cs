@@ -7,6 +7,7 @@ public class fan : MonoBehaviour {
 
 	public FirstPersonController controller;
     private GameObject player;
+	private AudioSource source;
 	Color c;
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,8 @@ public class fan : MonoBehaviour {
 		this.GetComponent<Renderer>().material.color= new Color(c.r,c.g,c.b,0.7f);
 		player=GameObject.FindWithTag("Player");
 		controller=player.GetComponent<FirstPersonController>();
+		source=this.GetComponent<AudioSource>();
+		source.volume=controller.getPerceptionMultiplier(this.transform.position);
 	}
 	
 	// Update is called once per frame

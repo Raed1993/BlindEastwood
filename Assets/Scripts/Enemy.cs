@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour {
     public int waitForMove = 5;
     private Vector3 zero = new Vector3(0, 0, 0);
     public AudioClip Disparo;
+    public AudioClip sonidoMoneda;
+    
 
     // Use this for initialization
     void Start () {
@@ -54,7 +56,12 @@ public class Enemy : MonoBehaviour {
             CancelInvoke();
             navMeshAgent.isStopped = true;
             MoveToPosition(other.transform.GetChild(0).position);
-
+            AudioSource audio2 = gameObject.AddComponent<AudioSource >();
+			
+			if (sonidoMoneda != null) {
+				audio2.PlayOneShot(sonidoMoneda,1.0f);
+				//reproducido = true;
+			} 
 
         }
     }

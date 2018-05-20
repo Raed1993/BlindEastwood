@@ -17,6 +17,6 @@ public class SollozoController : MonoBehaviour {
 
 	void Update(){
 		this.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().material.color=new Color(c.r,c.g,c.b,controller.getPerceptionMultiplier(this.transform.position)*0.6f);
-		audioSource.volume=controller.getPerceptionMultiplier(this.transform.position);
+		audioSource.volume=controller.getPerceptionMultiplier(this.transform.position)*0.6f;
 	}
 }

@@ -1848,7 +1848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26828f31499034439069d8b7d8aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golpePorra: {fileID: 8300000, guid: 58c50d75b028c3a4e97157f87f7fff96, type: 3}
+  golpePorra: {fileID: 8300000, guid: 91b1da49af7fb7243bca5a885e2b8df7, type: 3}
 --- !u!114 &114492156061031556
 MonoBehaviour:
   m_ObjectHideFlags: 1

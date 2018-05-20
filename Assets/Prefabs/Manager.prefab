@@ -64,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1280841143882668
 GameObject:
   m_ObjectHideFlags: 1
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4bf4d349005f04e91c00ad6a3ae351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 0
+  enemies: 4
 --- !u!114 &114643568899743594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -942,7 +942,8 @@ MonoBehaviour:
   animatorFemale4: {fileID: 0}
   textDialogue: {fileID: 114515413985471348}
   canvasIntro: {fileID: 223108597883703242}
-  textEndGame: {fileID: 114128034742894430}
+  textEndGame: {fileID: 114370841596568286}
+  ambiente: {fileID: 0}
 --- !u!114 &114838070369034654
 MonoBehaviour:
   m_ObjectHideFlags: 1

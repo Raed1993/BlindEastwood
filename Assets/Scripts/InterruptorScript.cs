@@ -7,6 +7,8 @@ public class InterruptorScript : MonoBehaviour {
 
 	private bool rotated;
 	private bool activated;
+	//private bool reproducido = false;
+	public AudioClip cortocircuito;
 	// Use this for initialization
 	void Start () {
 		rotated=false;
@@ -15,9 +17,15 @@ public class InterruptorScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyUp(KeyCode.E)){
+		/*if(Input.GetKeyUp(KeyCode.E)){ //BORRAR ESTE IF
 			activated=true;
-		}
+			AudioSource audio = gameObject.AddComponent<AudioSource >();
+			
+			if (cortocircuito != null) {
+				audio.PlayOneShot(cortocircuito,1.0f);
+				//reproducido = true;
+			} 
+		}*/
 		
 		if(activated && !rotated){
 			foreach(Collider c in GetComponents<Collider>())
@@ -33,9 +41,16 @@ public class InterruptorScript : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision e){
+	void OnTriggerEnter(Collider e){
 		if(e.gameObject.tag=="Stick"){
+			Debug.Log("SDfsdf");
 			activate();
+			AudioSource audio = gameObject.AddComponent<AudioSource >();
+			
+			if (cortocircuito != null) {
+				audio.PlayOneShot(cortocircuito,1.0f);
+				//reproducido = true;
+			} 
 		}
 	}
 	public void activate(){

@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 137493947619576364}
   - component: {fileID: 136148842408506280}
   - component: {fileID: 114103967750563884}
+  - component: {fileID: 54569875573767944}
   m_Layer: 9
   m_Name: BlindStick
   m_TagString: Stick
@@ -1602,7 +1603,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520657970852710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.31, y: 0.88, z: 10.915854}
+  m_LocalPosition: {x: 12.307778, y: 1.96, z: -2.98391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4106183958072888}
@@ -1685,6 +1686,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!54 &54569875573767944
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611958129650900}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!54 &54716966368932800
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1975,7 +1991,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: df413c69c2a3ce5449895f51cc465402, type: 3}
+  - {fileID: 2100000, guid: dfa90dc816f770b4f83888f99fafa9c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2067,7 +2083,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: df413c69c2a3ce5449895f51cc465402, type: 3}
+  - {fileID: 2100000, guid: dfa90dc816f770b4f83888f99fafa9c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

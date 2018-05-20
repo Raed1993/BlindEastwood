@@ -247,8 +247,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4724450179398394}
-  - component: {fileID: 114020762845267398}
   - component: {fileID: 114692399725826174}
+  - component: {fileID: 114458034302703568}
   m_Layer: 0
   m_Name: ManagerScene02
   m_TagString: Untagged
@@ -341,45 +341,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114020762845267398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772194049515680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5335b103045a70945a0c05121afff364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelNewGame: {fileID: 1968668738278520}
-  panelExit: {fileID: 1824705265213320}
-  panelDialogue: {fileID: 1940614126002550}
-  panelTitle: {fileID: 1259039796999604}
-  endGameCanvas: {fileID: 1119763902189934}
-  fadeOutCinematic: {fileID: 1297049792800492}
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  enemy4: {fileID: 0}
-  waypoint1: {fileID: 0}
-  waypoint2: {fileID: 0}
-  waypoint3: {fileID: 0}
-  waypoint4: {fileID: 0}
-  animatorMale1: {fileID: 0}
-  animatorMale2: {fileID: 0}
-  animatorMale3: {fileID: 0}
-  animatorMale4: {fileID: 0}
-  animatorMale5: {fileID: 0}
-  animatorMale6: {fileID: 0}
-  animatorFemale1: {fileID: 0}
-  animatorFemale2: {fileID: 0}
-  animatorFemale3: {fileID: 0}
-  animatorFemale4: {fileID: 0}
-  textDialogue: {fileID: 114540726023559262}
-  canvasIntro: {fileID: 223310334802570526}
-  textEndGame: {fileID: 114254287945655620}
-  ambiente: {fileID: 0}
 --- !u!114 &114025349363844450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -681,7 +642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114020762845267398}
+      - m_Target: {fileID: 0}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -769,6 +730,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114458034302703568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772194049515680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3a52f036a5bcc4caded7cf65cedb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameCanvas: {fileID: 0}
+  textEndGame: {fileID: 0}
+  ambiente: {fileID: 0}
 --- !u!114 &114540726023559262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -841,7 +816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114020762845267398}
+      - m_Target: {fileID: 0}
         m_MethodName: NEWGAME
         m_Mode: 1
         m_Arguments:
@@ -977,7 +952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114020762845267398}
+      - m_Target: {fileID: 0}
         m_MethodName: EXITGAME
         m_Mode: 1
         m_Arguments:

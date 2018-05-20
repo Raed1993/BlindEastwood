@@ -1942,7 +1942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1156908908915626}
-  footString: FadeWalkRigth
 --- !u!114 &114368778884810306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1955,7 +1954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1156908908915626}
-  footString: FadeWalkLeft
 --- !u!114 &114372502773950780
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	void Start()
 	{
 		totalEnemies = enemies;
+		Time.timeScale=1;
 	}
 
     // Update is called once per frame
@@ -37,9 +38,15 @@ public class GameManager : MonoBehaviour {
 		}
 		if (enemies <= 0)
 		{
-			//lo que pase
-			Debug.Log("You WIN!!!!");
+			EndGame ("\"You WIN!!!!\"");
+
 		}
+	}
+
+	public void EndGame(string text)
+	{
+		Debug.Log(text);
+		Time.timeScale = 0;
 	}
 	
 }

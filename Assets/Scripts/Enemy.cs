@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour {
     }
     void Attack()
     {
-		GameManager.instance.EndGame("Moriste");
+		GameManager.instance.EndGame("YOU DIED!");
         AudioSource audio = gameObject.AddComponent<AudioSource >();
 			
 			if (Disparo != null) {

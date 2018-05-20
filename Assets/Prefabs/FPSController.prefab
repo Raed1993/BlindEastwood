@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porraDamage: {fileID: 1611958129650900}
   thrust: 10
-  coinCounter: 3
+  coinCounter: 50
   coin: {fileID: 1027592808907184, guid: 25a325a2066cbd344823962d4935267a, type: 2}
   coinPos: {fileID: 1227195968850220}
 --- !u!114 &114516924253903176

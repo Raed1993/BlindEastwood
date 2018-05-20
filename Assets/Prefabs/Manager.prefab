@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 223123991358158676}
   - component: {fileID: 114074289256473312}
   - component: {fileID: 114025274027770994}
+  - component: {fileID: 225011881778520092}
   m_Layer: 0
   m_Name: EndGameCanvas
   m_TagString: Untagged
@@ -1383,6 +1384,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5, y: -13.4}
   m_SizeDelta: {x: -162, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225011881778520092
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883242028170428}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!225 &225349419876817604
 CanvasGroup:
   m_ObjectHideFlags: 1

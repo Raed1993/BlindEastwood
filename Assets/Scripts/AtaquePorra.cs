@@ -10,5 +10,10 @@ public class AtaquePorra : MonoBehaviour {
 		{
 			collider.GetComponent<GetKilledEnemy> ().Dead ();	
 		}
+
+		if(collider.tag == "Rehen")
+		{
+			GameManager.instance.EndGame("YouLose");
+		}
 	}
 }

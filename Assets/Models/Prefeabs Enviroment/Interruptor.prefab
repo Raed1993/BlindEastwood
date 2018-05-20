@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 23378905428975842}
   - component: {fileID: 65029065521240130}
   - component: {fileID: 65927343049380846}
-  - component: {fileID: 114551321869775998}
   - component: {fileID: 114642889935555218}
+  - component: {fileID: 114394252697478606}
   m_Layer: 0
   m_Name: Interruptor
   m_TagString: Interruptor
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 23032718681090954}
   - component: {fileID: 65806018994780024}
   - component: {fileID: 65285077753578248}
-  - component: {fileID: 114442965837482164}
+  - component: {fileID: 114864932030687816}
   m_Layer: 0
   m_Name: CajaInterruptor
   m_TagString: Untagged
@@ -256,21 +256,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114442965837482164
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772423288269140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.1
-  transitionIn: 0.1
-  transitionOut: 0.01
---- !u!114 &114551321869775998
+--- !u!114 &114394252697478606
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -278,7 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1026011663346732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1
@@ -295,3 +281,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01eb3f55644472469661853a8dddac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114864932030687816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772423288269140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+  transitionIn: 0.1
+  transitionOut: 0.01

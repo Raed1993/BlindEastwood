@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23309275358050834}
   - component: {fileID: 65276418185313778}
   - component: {fileID: 65826895327559970}
-  - component: {fileID: 114170061116766404}
+  - component: {fileID: 114217050971189670}
   m_Layer: 0
   m_Name: Foto
   m_TagString: Untagged
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 23839654062984914}
   - component: {fileID: 65642600626601352}
   - component: {fileID: 65640165084284744}
-  - component: {fileID: 114450488506414576}
+  - component: {fileID: 114140976726728140}
   m_Layer: 0
   m_Name: Marco
   m_TagString: Untagged
@@ -255,21 +255,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114170061116766404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1031703062531044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.1
-  transitionIn: 0.1
-  transitionOut: 0.01
---- !u!114 &114450488506414576
+--- !u!114 &114140976726728140
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -277,7 +263,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1184034225495258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+  transitionIn: 0.1
+  transitionOut: 0.01
+--- !u!114 &114217050971189670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031703062531044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1

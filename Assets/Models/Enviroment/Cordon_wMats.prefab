@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23436442554362272}
   - component: {fileID: 65824041948036018}
   - component: {fileID: 65783214178374226}
-  - component: {fileID: 114082473263004048}
+  - component: {fileID: 114696394675930176}
   m_Layer: 0
   m_Name: Stick_Cordon
   m_TagString: Untagged
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 23780720402734946}
   - component: {fileID: 65131853083330122}
   - component: {fileID: 65057484440300430}
-  - component: {fileID: 114453445110471468}
+  - component: {fileID: 114494448952732060}
   m_Layer: 0
   m_Name: Cordon
   m_TagString: Untagged
@@ -257,21 +257,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114082473263004048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1304775694788086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.1
-  transitionIn: 0.1
-  transitionOut: 0
---- !u!114 &114453445110471468
+--- !u!114 &114494448952732060
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -279,9 +265,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335881661483960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a4604ae99701a469217f605f903a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.1
   transitionIn: 0.1
-  transitionOut: 0
+  transitionOut: 0.01
+--- !u!114 &114696394675930176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304775694788086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f00c5dd38b2a764eb440215ba1a67bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.1
+  transitionIn: 0.1
+  transitionOut: 0.01

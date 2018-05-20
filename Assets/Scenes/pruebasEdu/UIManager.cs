@@ -62,11 +62,15 @@ public class UIManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         firstPersonController = player.GetComponent<FirstPersonController>();
-		if (SceneManager.GetActiveScene().name != "EscenaFinal") firstPersonController.enabled = false;
+		if (SceneManager.GetActiveScene().name != "EscenaFinal") 
+        {firstPersonController.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         canvasGroupIntro = canvasIntro.GetComponent<CanvasGroup>();
         canvasGroupDialogue = panelDialogue.GetComponent<CanvasGroup>();
+        }
+        else
+        CancelInvoke();
 
         
     }
@@ -162,7 +166,7 @@ public class UIManager : MonoBehaviour
 	{
 		if (endGameFading == false)
 		{
-			firstPersonController.enabled = false;
+			GameObject.FindWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
 			endGameCanvas.SetActive (true);
@@ -271,6 +275,7 @@ public class UIManager : MonoBehaviour
 	private void StartGameplay()
 	{
 		firstPersonController.enabled = true;
+        CancelInvoke();
 		SceneManager.LoadScene ("EscenaFinal");
 
 	}

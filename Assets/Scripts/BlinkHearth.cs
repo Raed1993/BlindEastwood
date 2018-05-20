@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class BlinkHearth : MonoBehaviour {
 
     public float duration = 0.1f;
-    float transition = 0.1f;
+    float transition = 0.5f;
     public Material material;
     public int alphaFade;
 
@@ -14,7 +14,7 @@ public class BlinkHearth : MonoBehaviour {
 	// Use this for initialization
     void Start()
     {
-        material = GetComponent<Renderer>().material;
+        material = GetComponent<MeshRenderer>().material;
         InvokeRepeating("Fade", duration, duration);
         player=GameObject.FindWithTag("Player");
         controller=player.GetComponent<FirstPersonController>();
@@ -27,15 +27,19 @@ public class BlinkHearth : MonoBehaviour {
 
     void Fade()
     {
-        material.color = Color.Lerp(material.color, new Color(1, 1, 1, controller.getPerceptionMultiplier(this.transform.position)*alphaFade), transition);
-        if (material.color.a > 0.8f)
-        {
-            alphaFade = 0;
-        }
+        if(controller.getPerceptionMultiplier(this.transform.position)>0.05){
+            material.color = Color.Lerp(material.color, new Color(1, 1, 1, alphaFade), transition);
+            if (material.color.a > 0.8f)
+            {
+                alphaFade = 0;
+            }
 
-        if (material.color.a < 0.2f)
-        {
-            alphaFade = 1;
+            if (material.color.a < 0.2f)
+            {
+                alphaFade = 1;
+            }
+        }else{
+            material.color =new Color(material.color.r,material.color.g,material.color.b,0f);
         }
     }
 }

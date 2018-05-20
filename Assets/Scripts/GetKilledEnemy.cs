@@ -7,22 +7,19 @@ public class GetKilledEnemy : MonoBehaviour {
 	public float alphaFade;
 	private float transition;
 	public float transitionOut=0.01f;
-	public GameObject colorEnemy;
 
 	public float duration=0.1f; 
 	private Material thisMaterial;
 	private Animator anim;
 	private AudioSource audioSource;
-	private Enemy enemy;
+
 	public AudioClip audioClip;
 
 	// Use this for initialization
 	void Start () {
-		audioSource = GetComponent<AudioSource> ();
-		anim = this.gameObject.GetComponent<Animator>();
+		this.gameObject.GetComponent<Animator>();
 		audioSource.clip=audioClip;
-		thisMaterial = colorEnemy.GetComponent<Renderer>().material;
-		enemy = GetComponent<Enemy> ();
+		thisMaterial=GetComponent<Renderer>().material;
 	}
 	
 	// Update is called once per frame
@@ -30,14 +27,18 @@ public class GetKilledEnemy : MonoBehaviour {
 		
 	}
 
-	public void Dead(){
-		enemy.CancelInvoke ();
-		Destroy (enemy);
+	void OnColliderEnter(Collider e){
+		if(e.gameObject.tag=="Stick"){
 			anim.SetTrigger("Morir");
 			audioSource.PlayOneShot(audioClip);
 			transition = transitionOut;
         	alphaFade = 0;
-			InvokeRepeating("Fade", duration, duration);
+        	Debug.Log("adios");
+			if (e.gameObject.tag == "Player"|| e.gameObject.tag=="Moneda" || e.gameObject.tag=="Moneda" || e.gameObject.tag=="Door")
+			{
+				InvokeRepeating("Fade", duration, duration);
+			}
+		}
 	}
 
 	void Fade()

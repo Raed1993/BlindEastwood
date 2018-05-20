@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,27 +10,54 @@ public class UIManager : MonoBehaviour
     public GameObject panelNewGame;
     public GameObject panelExit;
     public GameObject panelDialogue;
+    public GameObject panelTitle;
     public Text textDialogue;
+    public Canvas canvasIntro;
+    private CanvasGroup canvasGroupIntro;
+    private CanvasGroup canvasGroupDialogue;
+    private GameObject player;
+    private FirstPersonController firstPersonController;
     private int dialogueLength;
     private int i;
     private bool dialogueCompleted = false;
+    private bool gameStarted = false;
 
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.FindWithTag("Player");
+        firstPersonController = player.GetComponent<FirstPersonController>();
+        firstPersonController.enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        canvasGroupIntro = canvasIntro.GetComponent<CanvasGroup>();
+        canvasGroupDialogue = panelDialogue.GetComponent<CanvasGroup>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void NEWGAME()
     {
-        panelNewGame.SetActive(false);
+        
+        gameStarted = true;
+        firstPersonController.enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SetDialogue("New Game Started");
+        InvokeRepeating("FadeIntro", 0.025f, 0.025f);
+        /*panelNewGame.SetActive(false);
+        panelTitle.SetActive(false);
+        panelExit.SetActive(false);*/
+    }
+
+    private void FadeIntro()
+    {
+        canvasGroupIntro.alpha -= Mathf.Lerp(1, 0, 0.9f);
     }
 
     public void EXITGAME()
@@ -62,12 +90,13 @@ public class UIManager : MonoBehaviour
         Invoke("offDialogue", 5f);*/
     }
 
+
     
     IEnumerator FadingDialogue(string dialogueLine)
     {
         for (i = 0; i <= dialogueLength; i++)
         {
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
             textDialogue.text = dialogueLine.Substring(0, i);
             if (i == dialogueLength)
             {
@@ -77,10 +106,16 @@ public class UIManager : MonoBehaviour
         }
 
         if (dialogueCompleted == true)
-            {
-                yield return new WaitForSeconds(3f);
-                panelDialogue.SetActive(false);
-            }
+        {
+            yield return new WaitForSeconds(3f);
+            InvokeRepeating("FadeDialogue", 0.05f, 0.05f);
+        }
+    }
+
+    private void FadeDialogue()
+    {
+        canvasGroupDialogue.alpha -= Mathf.Lerp(1, 0, 0.9f);
+        if (canvasGroupDialogue.alpha == 0) panelDialogue.SetActive(true);
     }
 }
 

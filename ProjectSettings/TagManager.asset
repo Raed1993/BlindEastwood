@@ -8,6 +8,10 @@ TagManager:
   - Sound
   - NoiseCenter
   - Moneda
+  - Interruptor
+  - Door
+  - Enemy
+  - Stick
   layers:
   - Default
   - TransparentFX

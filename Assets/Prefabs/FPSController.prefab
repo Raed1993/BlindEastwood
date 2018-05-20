@@ -537,6 +537,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4394270083960612}
   - component: {fileID: 137493947619576364}
+  - component: {fileID: 136148842408506280}
+  - component: {fileID: 114103967750563884}
   m_Layer: 9
   m_Name: BlindStick
   m_TagString: Untagged
@@ -1600,7 +1602,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520657970852710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7418683, y: 2, z: -5.9899855}
+  m_LocalPosition: {x: 1.31, y: 0.88, z: 10.915854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4106183958072888}
@@ -1819,6 +1821,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114103967750563884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611958129650900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26828f31499034439069d8b7d8aa7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114492156061031556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1830,6 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f0d362f138232448fd2d0aaef787ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  porraDamage: {fileID: 1611958129650900}
   thrust: 10
   coinCounter: 3
   coin: {fileID: 1027592808907184, guid: 25a325a2066cbd344823962d4935267a, type: 2}
@@ -1934,6 +1948,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886262439549932}
   m_Enabled: 1
+--- !u!136 &136148842408506280
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611958129650900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.2
+  m_Height: 0.75
+  m_Direction: 2
+  m_Center: {x: -0.003770679, y: -2.18, z: 0.29}
 --- !u!137 &137255639503738930
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

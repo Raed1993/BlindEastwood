@@ -20,7 +20,7 @@ public class GetKilledEnemy : MonoBehaviour {
 
 	void awake()
 	{
-		GameManager.instance.enemies = +1;
+		GameManager.instance.enemies += 1;
 	}
 	// Use this for initialization
 	void Start () {

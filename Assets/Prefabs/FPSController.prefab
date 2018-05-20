@@ -1956,7 +1956,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
-  maxPerceptionDistance: 5
+  maxPerceptionDistance: 15
 --- !u!124 &124745858792178088
 Behaviour:
   m_ObjectHideFlags: 1

@@ -823,7 +823,7 @@ MonoBehaviour:
   endGameCanvas: {fileID: 1883242028170428}
   textDialogue: {fileID: 114515413985471348}
   canvasIntro: {fileID: 223108597883703242}
-  textEndGame: {fileID: 114128034742894430}
+  textEndGame: {fileID: 114370841596568286}
 --- !u!114 &114838070369034654
 MonoBehaviour:
   m_ObjectHideFlags: 1

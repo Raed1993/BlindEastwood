@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlinkMultimaterial : MonoBehaviour {
+public class HostageBlinkMultiple : MonoBehaviour {
 
-    public float duration = 0.1f;
+	public float duration = 0.1f;
     public float transitionIn=0.1f;
     public float transitionOut=0.01f;
 
@@ -16,7 +16,7 @@ public class BlinkMultimaterial : MonoBehaviour {
 	// Use this for initialization
     void Start()
     {
-		thisMaterials=this.GetComponent<MeshRenderer>().materials;
+		thisMaterials=this.GetComponent<SkinnedMeshRenderer>().materials;
         foreach(Material m in thisMaterials)
 		    m.color=new Color(1,1,1,0);
 		

@@ -25,7 +25,7 @@ public class Blink : MonoBehaviour {
         transition = transitionIn;
         alphaFade = 0.6f;
         Debug.Log("hola");
-		if(e.gameObject.tag=="Player" || e.gameObject.tag=="Moneda" || e.gameObject.tag=="Moneda" || e.gameObject.tag=="Door"){
+		if(e.gameObject.tag=="Player" || e.gameObject.tag=="Moneda" || e.gameObject.tag=="Stick" || e.gameObject.tag=="Door"){
             InvokeRepeating("Fade", duration, duration);
         }
 	}
@@ -35,7 +35,7 @@ public class Blink : MonoBehaviour {
         transition = transitionOut;
         alphaFade = 0;
         Debug.Log("adios");
-        if (e.gameObject.tag == "Player"|| e.gameObject.tag=="Moneda" || e.gameObject.tag=="Moneda" || e.gameObject.tag=="Door")
+        if (e.gameObject.tag == "Player"|| e.gameObject.tag=="Moneda" || e.gameObject.tag=="Stick" || e.gameObject.tag=="Door")
         {
             InvokeRepeating("Fade", duration, duration);
         }

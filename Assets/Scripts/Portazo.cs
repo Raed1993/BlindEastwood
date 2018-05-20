@@ -31,7 +31,6 @@ public class Portazo : MonoBehaviour {
 			this.transform.Rotate(0,-30,0);
 		}
 		if(done ){
-			Debug.Log("sdfsdf");
 			this.GetComponent<MeshRenderer>().material.color=GameObject.Find("filing-cabinet-empty (3)").GetComponent<MeshRenderer>().material.color;
 			if(this.GetComponent<MeshRenderer>().material.color.a<0.1f){
 				done=false;

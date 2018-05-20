@@ -2074,6 +2074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 10
   waitForMove: 3
+  Disparo: {fileID: 8300000, guid: 2bf9312a35fbdb0498b168db16f0f287, type: 3}
 --- !u!114 &114701838466238462
 MonoBehaviour:
   m_ObjectHideFlags: 1

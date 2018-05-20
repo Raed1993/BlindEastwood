@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
     private bool isShotable = false;
     public int waitForMove = 5;
     private Vector3 zero = new Vector3(0, 0, 0);
+    public AudioClip Disparo;
 
     // Use this for initialization
     void Start () {
@@ -93,6 +94,12 @@ public class Enemy : MonoBehaviour {
     }
     void Attack()
     {
-		GameManager.instance.EndGame("Muriste");
+		GameManager.instance.EndGame("Moriste");
+        AudioSource audio = gameObject.AddComponent<AudioSource >();
+			
+			if (Disparo != null) {
+				audio.PlayOneShot(Disparo,1.0f);
+				//reproducido = true;
+			} 
     }
 }

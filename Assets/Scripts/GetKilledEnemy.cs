@@ -38,6 +38,7 @@ public class GetKilledEnemy : MonoBehaviour {
 	}
 
 	public void Dead(){
+		this.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.active=false;
 		enemy.CancelInvoke ();
 		Destroy (navMeshAgent);
 		Destroy (enemy);
@@ -47,6 +48,7 @@ public class GetKilledEnemy : MonoBehaviour {
     	alphaFade = 0;
 		InvokeRepeating("Fade", duration, duration);
 		GameManager.instance.EnemyDie ();
+		
 	}
 
 	void Fade()

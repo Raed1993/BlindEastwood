@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attacks : MonoBehaviour
 {
-
+	public GameObject porraDamage;
     public float thrust;
     public float coinCounter = 3f;
     public GameObject coin;
@@ -15,6 +15,7 @@ public class Attacks : MonoBehaviour
     private GameObject m_camera;
     private SkinnedMeshRenderer meshRendererCoin;
     private bool canAttack = true;
+	private CapsuleCollider porraCollider;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class Attacks : MonoBehaviour
         animatorTest = GetComponent<Animator>();
         m_camera = GameObject.FindWithTag("MainCamera");
         meshRendererCoin = coinPos.transform.parent.GetComponent<SkinnedMeshRenderer>();
+		porraCollider = porraDamage.GetComponent<CapsuleCollider> ();
     }
 
     // Update is called once per frame
@@ -65,4 +67,12 @@ public class Attacks : MonoBehaviour
     {
         canAttack = true;
     }
+
+	void CanDamage(int canDamage)
+	{
+		if (canDamage > 0)
+			porraCollider.enabled = true;
+		else
+			porraCollider.enabled = false;
+	}
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a3d3ae904c7ebbc48a381ac8a58c08e7
-timeCreated: 1526768078
+guid: 4422edb78cf07274b8d0575a161e5f0e
+timeCreated: 1526815967
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -141,7 +141,7 @@ ModelImporter:
     400132: //RootNode
     2100000: No Name
     4300000: Realistic_White_Female_Low_Poly
-    7400000: Terrified
+    7400000: Dwarf Idle@Warrior Idle
     9500000: //RootNode
     13700000: Realistic_White_Female_Low_Poly
   externalObjects: {}
@@ -172,10 +172,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Terrified
+      name: Dwarf Idle@Warrior Idle
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 480
+      lastFrame: 275
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

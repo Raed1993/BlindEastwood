@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8080febf64691ce4fa9f8ac7cce63a06
-timeCreated: 1526767691
+guid: 19dc943849fc8b64ba3fec61736992fb
+timeCreated: 1526815965
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -125,7 +125,7 @@ ModelImporter:
     400116: //RootNode
     2100000: No Name
     4300000: Realistic_White_Male_Low_Poly
-    7400000: Happy Idle
+    7400000: Idle
     9500000: //RootNode
     13700000: Realistic_White_Male_Low_Poly
   externalObjects: {}
@@ -156,10 +156,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Happy Idle
+      name: Idle
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 117
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

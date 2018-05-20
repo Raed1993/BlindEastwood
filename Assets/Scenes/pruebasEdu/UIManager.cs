@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         firstPersonController = player.GetComponent<FirstPersonController>();
-        firstPersonController.enabled = false;
+		if (SceneManager.GetActiveScene().name != "EscenaFinal") firstPersonController.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         canvasGroupIntro = canvasIntro.GetComponent<CanvasGroup>();

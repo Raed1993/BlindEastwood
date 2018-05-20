@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal2.0Cinematica.unity
+    guid: b95f86786ba8f5d4ea1e031d40395cbd
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: 41734e360b488774ab90583ee45cb064

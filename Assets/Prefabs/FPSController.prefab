@@ -1848,6 +1848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26828f31499034439069d8b7d8aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  golpePorra: {fileID: 8300000, guid: 91b1da49af7fb7243bca5a885e2b8df7, type: 3}
 --- !u!114 &114492156061031556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1861,7 +1862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porraDamage: {fileID: 1611958129650900}
   thrust: 10
-  coinCounter: 3
+  coinCounter: 50
   coin: {fileID: 1027592808907184, guid: 25a325a2066cbd344823962d4935267a, type: 2}
   coinPos: {fileID: 1227195968850220}
 --- !u!114 &114516924253903176
@@ -1956,7 +1957,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
-  maxPerceptionDistance: 5
+  maxPerceptionDistance: 15
 --- !u!124 &124745858792178088
 Behaviour:
   m_ObjectHideFlags: 1

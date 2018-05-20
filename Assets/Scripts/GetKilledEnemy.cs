@@ -18,9 +18,11 @@ public class GetKilledEnemy : MonoBehaviour {
 	public AudioClip audioClip;
 	private NavMeshAgent navMeshAgent;
 
+	private bool isAlive = true;
+
 	void awake()
 	{
-		GameManager.instance.enemies = +1;
+		GameManager.instance.enemies += 1;
 	}
 	// Use this for initialization
 	void Start () {
@@ -38,15 +40,20 @@ public class GetKilledEnemy : MonoBehaviour {
 	}
 
 	public void Dead(){
-		enemy.CancelInvoke ();
-		Destroy (navMeshAgent);
-		Destroy (enemy);
-		anim.SetTrigger("Morir");
-		audioSource.PlayOneShot(audioClip);
-		transition = transitionOut;
-    	alphaFade = 0;
-		InvokeRepeating("Fade", duration, duration);
-		GameManager.instance.EnemyDie ();
+		if(isAlive){
+			this.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.active=false;
+			enemy.CancelInvoke ();
+			Destroy (navMeshAgent);
+			Destroy (enemy);
+			anim.SetTrigger("Morir");
+			audioSource.PlayOneShot(audioClip);
+			transition = transitionOut;
+			alphaFade = 0;
+			InvokeRepeating("Fade", duration, duration);
+			GameManager.instance.EnemyDie ();
+			isAlive=false;
+		}
+		
 	}
 
 	void Fade()

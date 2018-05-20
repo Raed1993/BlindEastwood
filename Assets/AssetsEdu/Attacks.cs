@@ -30,12 +30,12 @@ public class Attacks : MonoBehaviour
     void Update()
     {
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(1))
         {
             animatorTest.SetTrigger("Attack");
         }
 
-		if (Input.GetMouseButtonDown(1))
+		if (Input.GetMouseButtonDown(0))
         {
             if (coinCounter > 0 && canAttack)
             {

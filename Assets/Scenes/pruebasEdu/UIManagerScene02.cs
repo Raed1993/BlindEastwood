@@ -17,6 +17,11 @@ public class UIManagerScene02 : MonoBehaviour
     private bool gameStarted = false;
 	private bool endGameFading = false;
 	public AudioClip ambiente;
+    private int dialogueLength;
+    private bool dialogueCompleted;
+    public Text textDialogue;
+    public CanvasGroup canvasGroupDialogue;
+    public GameObject panelDialogue;
 
     // Use this for initialization
     void Start()
@@ -31,16 +36,60 @@ public class UIManagerScene02 : MonoBehaviour
         }
         else
         CancelInvoke();
+        Invoke("MensajeInicio", 1f);        
+    }
 
-        
+    void MensajeInicio()
+    {
+        Mensaje("turn off the lights");
+    }
+
+    public void Mensaje(string mensaje)
+    {
+        textDialogue.text = "";
+        canvasGroupDialogue.alpha = 1;
+        panelDialogue.SetActive(true);
+        dialogueLength = mensaje.Length;
+        StartCoroutine(FadingDialogue(mensaje));
     }
 
     // Update is called once per frame
     void Update()
     {
     }
-    
-	public void EndGame(string text)
+
+    IEnumerator FadingDialogue(string dialogueLine)
+    {
+        for (int i = 0; i <= dialogueLength; i++)
+        {
+            yield return new WaitForSeconds(0.05f);
+            textDialogue.text = dialogueLine.Substring(0, i);
+            if (i == dialogueLength)
+            {
+                dialogueCompleted = true;
+            }
+
+        }
+
+        if (dialogueCompleted == true)
+        {
+            yield return new WaitForSeconds(3f);
+            InvokeRepeating("FadeDialogue", 0.05f, 0.05f);
+        }
+    }
+
+    private void FadeDialogue()
+    {
+        canvasGroupDialogue.alpha -= Mathf.Lerp(1, 0, 0.9f);
+        if (canvasGroupDialogue.alpha == 0)
+        {
+            panelDialogue.SetActive(true);
+            CancelInvoke("FadeDialogue");
+        }
+    }
+
+
+    public void EndGame(string text)
 	{
 		if (endGameFading == false)
 		{

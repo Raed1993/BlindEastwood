@@ -40,6 +40,7 @@ public class InterruptorScript : MonoBehaviour {
 			}else{
 				rotated=true;
 				door.gameObject.GetComponent<Portazo>().Opened();
+                GameManager.instance.uiManager.Mensaje("Kill all enemies");
 			}
 		}
 	}

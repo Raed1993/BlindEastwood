@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	static public GameManager instance;
 	public int enemies;
 	private int totalEnemies;
-	private UIManagerScene02 uiManager;
+	public UIManagerScene02 uiManager;
 	// Use this for initialization
 	void Awake () 
 	{

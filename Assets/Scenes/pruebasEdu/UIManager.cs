@@ -160,7 +160,11 @@ public class UIManager : MonoBehaviour
     private void FadeDialogue()
     {
         canvasGroupDialogue.alpha -= Mathf.Lerp(1, 0, 0.9f);
-        if (canvasGroupDialogue.alpha == 0) panelDialogue.SetActive(true);
+        if (canvasGroupDialogue.alpha == 0)
+        {
+            panelDialogue.SetActive(true);
+            CancelInvoke("FadeDialogue");
+        }
     }
 
 	public void EndGame(string text)

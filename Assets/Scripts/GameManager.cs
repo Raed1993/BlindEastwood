@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
 		}
 		if (enemies <= 0)
 		{
-			Invoke ("in", 2f);
+			Invoke ("win", 2f);
 
 		}
 	}

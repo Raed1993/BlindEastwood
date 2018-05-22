@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour {
         {
             transform.LookAt(other.transform);
             CancelInvoke();
+            if(navMeshAgent.isActiveAndEnabled==true)
             navMeshAgent.isStopped = true;
             MoveToPosition(other.transform.GetChild(0).position);
 			
@@ -96,9 +97,12 @@ public class Enemy : MonoBehaviour {
 
     void MoveToPosition(Vector3 position)
     {
-        navMeshAgent.isStopped = false;
-        navMeshAgent.destination = position;
-        InvokeRepeating("Move", 0, waitForMove);
+        if (navMeshAgent.isActiveAndEnabled == true )
+        {
+            navMeshAgent.isStopped = false;
+            navMeshAgent.destination = position;
+            InvokeRepeating("Move", 0, waitForMove);
+        }
     }
     void Attack()
     {

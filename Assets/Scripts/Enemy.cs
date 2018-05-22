@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour {
         {
             CancelInvoke();
             navMeshAgent.isStopped = false;
-            Debug.Log("Sale: " + other.tag);
+
             InvokeRepeating("Move", 0, waitForMove);
         }
     }

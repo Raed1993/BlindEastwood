@@ -43,7 +43,6 @@ public class InterruptorScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider e){
 		if(e.gameObject.tag=="Stick"){
-			Debug.Log("SDfsdf");
 			activate();
 			AudioSource audio = gameObject.AddComponent<AudioSource >();
 			

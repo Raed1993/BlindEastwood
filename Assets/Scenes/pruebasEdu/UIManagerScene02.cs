@@ -38,26 +38,8 @@ public class UIManagerScene02 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		AudioSource audio = gameObject.AddComponent<AudioSource >();
-
-		if (ambiente != null) {
-			audio.PlayOneShot(ambiente,1.0f);
-			//reproducido = true;
-		} 
     }
  
-
-   
-
-    
-
-    
-
-    
-   
-
-    
-
 	public void EndGame(string text)
 	{
 		if (endGameFading == false)

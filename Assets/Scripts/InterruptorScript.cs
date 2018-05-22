@@ -9,6 +9,7 @@ public class InterruptorScript : MonoBehaviour {
 	private bool activated;
 	//private bool reproducido = false;
 	public AudioClip cortocircuito;
+    public GameObject door;
     private AudioSource audioSource;
     // Use this for initialization
     void Start () {
@@ -38,7 +39,7 @@ public class InterruptorScript : MonoBehaviour {
 				
 			}else{
 				rotated=true;
-				GameObject.FindWithTag("Door").gameObject.GetComponent<Portazo>().Opened();
+				door.gameObject.GetComponent<Portazo>().Opened();
 			}
 		}
 	}

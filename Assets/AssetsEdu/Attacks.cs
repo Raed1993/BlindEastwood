@@ -16,6 +16,7 @@ public class Attacks : MonoBehaviour
     private SkinnedMeshRenderer meshRendererCoin;
     private bool canAttack = true;
 	private CapsuleCollider porraCollider;
+    private AtaquePorra ataquePorra;
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,7 @@ public class Attacks : MonoBehaviour
         m_camera = GameObject.FindWithTag("MainCamera");
         meshRendererCoin = coinPos.transform.parent.GetComponent<SkinnedMeshRenderer>();
 		porraCollider = porraDamage.GetComponent<CapsuleCollider> ();
+        ataquePorra = porraDamage.GetComponent<AtaquePorra>();
     }
 
     // Update is called once per frame
@@ -65,9 +67,12 @@ public class Attacks : MonoBehaviour
 
 	void CanDamage(int canDamage)
 	{
-		if (canDamage > 0)
-			porraCollider.enabled = true;
-		else
-			porraCollider.enabled = false;
+        if (canDamage > 0)
+        {
+            porraCollider.enabled = true;
+            ataquePorra.Sound();
+        }
+        else
+            porraCollider.enabled = false;
 	}
 }

@@ -18,12 +18,6 @@ public class AtaquePorra : MonoBehaviour {
 	{
         if (collider.tag != "Sound")
         {
-            if (golpePorra != null)
-            {
-                Invoke("Sound", 0.5f);
-                audioSource.PlayOneShot(golpePorra, 1.0f);
-                //reproducido = true;
-            }
             if (collider.tag == "Enemy")
             {
                 collider.GetComponent<GetKilledEnemy>().Dead();
@@ -36,8 +30,9 @@ public class AtaquePorra : MonoBehaviour {
         }
 	}
 
-    private void Sound()
+    public void Sound()
     {
+        audioSource.PlayOneShot(golpePorra, 1.0f);
         fps.InstantiateSound();
     }
 }

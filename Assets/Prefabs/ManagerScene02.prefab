@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 223438067841105874}
   - component: {fileID: 114774419225495088}
   - component: {fileID: 114025349363844450}
+  - component: {fileID: 225974414787173660}
   m_Layer: 0
   m_Name: EndGameCanvas
   m_TagString: Untagged
@@ -642,7 +643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114458034302703568}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -741,9 +742,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3a52f036a5bcc4caded7cf65cedb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGameCanvas: {fileID: 0}
-  textEndGame: {fileID: 0}
-  ambiente: {fileID: 0}
+  endGameCanvas: {fileID: 1119763902189934}
+  textEndGame: {fileID: 114254287945655620}
+  ambiente: {fileID: 8300000, guid: c1a4325a94240b7489b7fcca936f3403, type: 3}
 --- !u!114 &114540726023559262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1570,6 +1571,17 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230896166588156}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!225 &225974414787173660
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119763902189934}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1

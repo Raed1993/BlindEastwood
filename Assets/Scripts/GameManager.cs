@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public int enemies;
 	private int totalEnemies;
 	public UIManagerScene02 uiManager;
+    public float timeToEnd;
 	// Use this for initialization
 	void Awake () 
 	{
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update ()
 	{
+        timeToEnd += Time.deltaTime;
 	}
 
 	public void EnemyDie(){
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour {
 
 	void win()
 	{
-		EndGame ("YOU WIN!!!");
+        float minutes = Mathf.Floor(timeToEnd / 60);
+        float seconds = timeToEnd % 60;
+        EndGame("YOU WIN in " + minutes.ToString() + ":" + Mathf.RoundToInt(seconds).ToString() );
 	}
 }

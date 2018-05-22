@@ -19,6 +19,11 @@ public class GetKilledEnemy : MonoBehaviour {
 	private NavMeshAgent navMeshAgent;
 
 	private bool isAlive = true;
+
+	void awake()
+	{
+		GameManager.instance.enemies += 1;
+	}
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource> ();
@@ -40,7 +45,6 @@ public class GetKilledEnemy : MonoBehaviour {
 			enemy.CancelInvoke ();
 			Destroy (navMeshAgent);
 			Destroy (enemy);
-            Destroy(GetComponent<CapsuleCollider>());
 			anim.SetTrigger("Morir");
 			audioSource.PlayOneShot(audioClip);
 			transition = transitionOut;

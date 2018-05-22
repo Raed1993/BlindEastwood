@@ -41,7 +41,7 @@ public class UIManagerScene02 : MonoBehaviour
 
     void MensajeInicio()
     {
-        Mensaje("turn off the lights");
+        Mensaje("I'll turn off the lights\n and teach them a lesson...");
     }
 
     public void Mensaje(string mensaje)

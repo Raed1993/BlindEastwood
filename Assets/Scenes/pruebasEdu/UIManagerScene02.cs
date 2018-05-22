@@ -39,7 +39,7 @@ public class UIManagerScene02 : MonoBehaviour
     void Update()
     {
     }
- 
+    
 	public void EndGame(string text)
 	{
 		if (endGameFading == false)

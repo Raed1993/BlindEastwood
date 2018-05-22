@@ -111,7 +111,9 @@ public class UIManager : MonoBehaviour
 
     public void SetDialogue(string dialogueLine)
     {
+        CancelInvoke("FadeDialogue");
         textDialogue.text = "";
+        canvasGroupDialogue.alpha = 1;
         panelDialogue.SetActive(true);
         //textDialogue.text = dialogueLine;
         dialogueLength = dialogueLine.Length;
@@ -244,11 +246,13 @@ public class UIManager : MonoBehaviour
 
 	private void FadeCinematic()
 	{
-		if (fadeOutCinematic.activeSelf == false) fadeOutCinematic.SetActive (true);
-		{
-			SetDialogue("Time to show these punks a lesson");
-			fadeOutCinematic.GetComponent<CanvasGroup> ().alpha += Mathf.Lerp (1, 0, 0.9f);
-		}
+        if (fadeOutCinematic.activeSelf == false)
+        {
+            fadeOutCinematic.SetActive(true);
+            SetDialogue("Time to show these punks a lesson");
+        }
+		fadeOutCinematic.GetComponent<CanvasGroup> ().alpha += Mathf.Lerp (1, 0, 0.9f);
+		
 	}
 
 	private void LookAtPlayer1()

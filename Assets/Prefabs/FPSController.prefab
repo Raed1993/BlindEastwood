@@ -683,6 +683,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1746629408452280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4652331759978182}
+  m_Layer: 9
+  m_Name: WalkSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1748790555940196
 GameObject:
   m_ObjectHideFlags: 1
@@ -1241,6 +1256,19 @@ Transform:
   m_Father: {fileID: 4607401495494690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4652331759978182
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1746629408452280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.003, y: -0.884, z: 0.163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4976855596347368}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4674467798110798
 Transform:
   m_ObjectHideFlags: 1
@@ -1602,14 +1630,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520657970852710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.307778, y: 1.96, z: -2.98391}
+  m_LocalRotation: {x: -0, y: -0.69983125, z: -0, w: 0.7143082}
+  m_LocalPosition: {x: 12.572, y: 1.96, z: -3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4106183958072888}
+  - {fileID: 4652331759978182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -88.827, z: 0}
 --- !u!4 &4988222675965610
 Transform:
   m_ObjectHideFlags: 1
@@ -1957,6 +1986,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
+  soundWalk: {fileID: 1798644767048926, guid: 1946c3ca2c102344a913c9ae902fd71c, type: 2}
+  soundPosition: {fileID: 1746629408452280}
   maxPerceptionDistance: 15
 --- !u!124 &124745858792178088
 Behaviour:
@@ -2175,7 +2206,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.7
-  m_Radius: 0.2
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08

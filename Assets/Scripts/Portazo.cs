@@ -9,13 +9,14 @@ public class Portazo : MonoBehaviour {
 	bool done;
 	bool reproducido = false;
 	public AudioClip openDoor;
+    private AudioSource audioSource;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		opened=false;
 		free=false;
 		done=false;
-		
+        audioSource = GetComponent<AudioSource>();		
 	}
 	
 	// Update is called once per frame
@@ -27,10 +28,9 @@ public class Portazo : MonoBehaviour {
 			Color c=this.GetComponent<MeshRenderer>().material.color;
 			this.GetComponent<MeshRenderer>().material.color=new Color(c.r,c.b,c.g,0.6f);
 			this.transform.Rotate(0,3,0);
-			AudioSource audio = gameObject.AddComponent<AudioSource >();
 			
 			if (openDoor != null && reproducido == false) {
-				audio.PlayOneShot(openDoor,1.0f);
+                audioSource.PlayOneShot(openDoor,1.0f);
 				reproducido = true;
 			} 
 				

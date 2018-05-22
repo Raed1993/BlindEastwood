@@ -9,11 +9,13 @@ public class InterruptorScript : MonoBehaviour {
 	private bool activated;
 	//private bool reproducido = false;
 	public AudioClip cortocircuito;
-	// Use this for initialization
-	void Start () {
+    private AudioSource audioSource;
+    // Use this for initialization
+    void Start () {
 		rotated=false;
 		activated=false;
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -44,10 +46,8 @@ public class InterruptorScript : MonoBehaviour {
 	void OnTriggerEnter(Collider e){
 		if(e.gameObject.tag=="Stick"){
 			activate();
-			AudioSource audio = gameObject.AddComponent<AudioSource >();
-			
 			if (cortocircuito != null) {
-				audio.PlayOneShot(cortocircuito,1.0f);
+				audioSource.PlayOneShot(cortocircuito,1.0f);
 				//reproducido = true;
 			} 
 		}

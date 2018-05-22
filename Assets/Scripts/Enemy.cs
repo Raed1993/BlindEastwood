@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
     private Vector3 zero = new Vector3(0, 0, 0);
     public AudioClip Disparo;
     public AudioClip sonidoMoneda;
+    public AudioSource audioSource;
     
 
     // Use this for initialization
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         InvokeRepeating("Move", 0, waitForMove);
+        audioSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -56,10 +58,9 @@ public class Enemy : MonoBehaviour {
             CancelInvoke();
             navMeshAgent.isStopped = true;
             MoveToPosition(other.transform.GetChild(0).position);
-            AudioSource audio2 = gameObject.AddComponent<AudioSource >();
 			
 			if (sonidoMoneda != null) {
-				audio2.PlayOneShot(sonidoMoneda,1.0f);
+				audioSource.PlayOneShot(sonidoMoneda,1.0f);
 				//reproducido = true;
 			} 
 
@@ -102,11 +103,10 @@ public class Enemy : MonoBehaviour {
     void Attack()
     {
 		GameManager.instance.EndGame("YOU DIED!");
-        AudioSource audio = gameObject.AddComponent<AudioSource >();
 			
-			if (Disparo != null) {
-				audio.PlayOneShot(Disparo,1.0f);
-				//reproducido = true;
-			} 
+		if (Disparo != null) {
+			audioSource.PlayOneShot(Disparo,1.0f);
+			//reproducido = true;
+		} 
     }
 }

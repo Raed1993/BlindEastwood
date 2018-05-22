@@ -1,27 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class AtaquePorra : MonoBehaviour {
-	
+
+    public FirstPersonController fps;
 	public AudioClip golpePorra;
+    private AudioSource audioSource;
 
-	void OnTriggerEnter(Collider collider)
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void OnTriggerEnter(Collider collider)
 	{
-		AudioSource audio = gameObject.AddComponent<AudioSource >();
+        if (collider.tag != "Sound")
+        {
+            if (golpePorra != null)
+            {
+                Invoke("Sound", 0.5f);
+                audioSource.PlayOneShot(golpePorra, 1.0f);
+                //reproducido = true;
+            }
+            if (collider.tag == "Enemy")
+            {
+                collider.GetComponent<GetKilledEnemy>().Dead();
+            }
 
-		if (golpePorra != null) {
-			audio.PlayOneShot(golpePorra,1.0f);
-			//reproducido = true;
-		} 
-		if(collider.tag == "Enemy")
-		{
-			collider.GetComponent<GetKilledEnemy> ().Dead ();	
-		}
-
-		if(collider.tag == "Rehen")
-		{
-			GameManager.instance.EndGame("YouLose");
-		}
+            if (collider.tag == "Rehen")
+            {
+                GameManager.instance.EndGame("YouLose");
+            }
+        }
 	}
+
+    private void Sound()
+    {
+        fps.InstantiateSound();
+    }
 }

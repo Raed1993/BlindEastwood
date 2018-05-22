@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
     private bool gameStarted = false;
 	private bool endGameFading = false;
 	public AudioClip ambiente;
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start()
@@ -78,10 +79,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		AudioSource audio = gameObject.AddComponent<AudioSource >();
-
 		if (ambiente != null) {
-			audio.PlayOneShot(ambiente,1.0f);
+            audioSource.PlayOneShot(ambiente,1.0f);
 			//reproducido = true;
 		} 
     }

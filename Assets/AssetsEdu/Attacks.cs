@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Attacks : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Attacks : MonoBehaviour
     private bool canAttack = true;
 	private CapsuleCollider porraCollider;
     private AtaquePorra ataquePorra;
+    private FirstPersonController fps;
 
     // Use this for initialization
     void Start()
@@ -26,6 +28,7 @@ public class Attacks : MonoBehaviour
         meshRendererCoin = coinPos.transform.parent.GetComponent<SkinnedMeshRenderer>();
 		porraCollider = porraDamage.GetComponent<CapsuleCollider> ();
         ataquePorra = porraDamage.GetComponent<AtaquePorra>();
+        fps = GetComponent<FirstPersonController>();
     }
 
     // Update is called once per frame
@@ -73,6 +76,9 @@ public class Attacks : MonoBehaviour
             ataquePorra.Sound();
         }
         else
+        {
             porraCollider.enabled = false;
+            fps.InstantiateSound();
+        }
 	}
 }

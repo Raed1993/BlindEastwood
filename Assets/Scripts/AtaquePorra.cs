@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class AtaquePorra : MonoBehaviour {
 
-    public FirstPersonController fps;
 	public AudioClip golpePorra;
     private AudioSource audioSource;
 
@@ -33,6 +32,5 @@ public class AtaquePorra : MonoBehaviour {
     public void Sound()
     {
         audioSource.PlayOneShot(golpePorra, 1.0f);
-        fps.InstantiateSound();
     }
 }

@@ -1808,7 +1808,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1820,7 +1820,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1832,7 +1832,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82328249971414792
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1900,7 +1900,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1958,7 +1958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26828f31499034439069d8b7d8aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fps: {fileID: 114516924253903176}
   golpePorra: {fileID: 8300000, guid: 91b1da49af7fb7243bca5a885e2b8df7, type: 3}
 --- !u!114 &114492156061031556
 MonoBehaviour:
@@ -2087,10 +2086,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 0
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_Height: 0.75
   m_Direction: 2
-  m_Center: {x: -0.003770679, y: -2.18, z: 0.48}
+  m_Center: {x: -0.003770679, y: -2.18, z: 0.32}
 --- !u!137 &137255639503738930
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

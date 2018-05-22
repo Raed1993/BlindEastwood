@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increasePerframe: 1
-  maxSize: 3
+  maxSize: 4
 --- !u!135 &135366127605072668
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour {
             transform.LookAt(other.transform);
             CancelInvoke();
             navMeshAgent.isStopped = true;
-            Invoke("Attack", 0.5f);
+            Attack();
         }
 
         if (other.tag == "Sound")

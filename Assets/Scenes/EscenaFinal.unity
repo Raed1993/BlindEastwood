@@ -13422,18 +13422,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4806412394985580, guid: 664d48038fea84f448d178b73a4ce6c0, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 219.474
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806412394985580, guid: 664d48038fea84f448d178b73a4ce6c0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806412394985580, guid: 664d48038fea84f448d178b73a4ce6c0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1338296845222972, guid: 664d48038fea84f448d178b73a4ce6c0, type: 2}
       propertyPath: m_Name
       value: Enemigo (3)
@@ -17947,15 +17935,6 @@ Prefab:
     - target: {fileID: 4724450179398394, guid: 957505d7a68bd8144ac4f7525e4911f8, type: 2}
       propertyPath: m_RootOrder
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 224997797707498324, guid: 957505d7a68bd8144ac4f7525e4911f8,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1567800794627260, guid: 957505d7a68bd8144ac4f7525e4911f8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 957505d7a68bd8144ac4f7525e4911f8, type: 2}
@@ -34912,26 +34891,6 @@ Prefab:
     - target: {fileID: 4976855596347368, guid: be33d5fc7a8e4314fbf087eb070a7c1e, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82100307059838230, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82100307059838230, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82100307059838230, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82328249971414792, guid: be33d5fc7a8e4314fbf087eb070a7c1e,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be33d5fc7a8e4314fbf087eb070a7c1e, type: 2}

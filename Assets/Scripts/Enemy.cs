@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
     private bool isShotable = false;
     public int waitForMove = 5;
     private Vector3 zero = new Vector3(0, 0, 0);
+    private bool dificil;
     public AudioClip Disparo;
     public AudioClip sonidoMoneda;
     public AudioSource audioSource;
@@ -23,6 +24,8 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         InvokeRepeating("Move", 0, waitForMove);
         audioSource = GetComponent<AudioSource>();
+        dificil = PlayerPrefs.GetInt("dificil") == 0 ? true : false;
+        Debug.Log(dificil);
     }
 	
 	// Update is called once per frame
@@ -54,7 +57,8 @@ public class Enemy : MonoBehaviour {
 
         if (other.tag == "Sound")
         {
-            transform.LookAt(other.transform);
+            if (dificil)
+                transform.LookAt(other.transform);
             CancelInvoke();
             if(navMeshAgent.isActiveAndEnabled==true)
             navMeshAgent.isStopped = true;

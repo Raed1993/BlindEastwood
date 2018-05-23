@@ -57,6 +57,19 @@ public class GameManager : MonoBehaviour {
 	{
         float minutes = Mathf.Floor(timeToEnd / 60);
         float seconds = timeToEnd % 60;
-        EndGame("YOU WIN in " + minutes.ToString() + ":" + Mathf.RoundToInt(seconds).ToString() );
+
+        string mode;
+
+
+        if (PlayerPrefs.GetInt("dificil") == 0)
+        {
+
+            mode = "Original Mode";
+        }
+        else
+        {
+            mode = "Easy Mode";
+        }
+        EndGame("YOU WIN in " + minutes.ToString() + ":" + Mathf.RoundToInt(seconds).ToString() + "\n" +  mode);
 	}
 }

@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
     public Text textDialogue;
     public Canvas canvasIntro;
 	public Text textEndGame;
+    public Text easyGame;
     private CanvasGroup canvasGroupIntro;
     private CanvasGroup canvasGroupDialogue;
     private GameObject player;
@@ -286,6 +287,21 @@ public class UIManager : MonoBehaviour
 		SceneManager.LoadScene ("EscenaFinal");
 
 	}
+
+    public void SetDificil()
+    {
+        if(PlayerPrefs.GetInt("dificil") > 0)
+        {
+            PlayerPrefs.SetInt("dificil", 0);
+            easyGame.text = "Original Mode";
+        }
+        else
+        {
+            easyGame.text = "Easy Mode";
+            PlayerPrefs.SetInt("dificil", 1);
+        }
+        Debug.Log(PlayerPrefs.GetInt("dificil"));
+    }
 }
 
 

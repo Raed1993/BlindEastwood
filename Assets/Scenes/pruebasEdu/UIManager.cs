@@ -52,6 +52,8 @@ public class UIManager : MonoBehaviour
 	public AudioClip ambiente;
     private AudioSource audioSource;
 
+	public GameObject[] menus;
+
     // Use this for initialization
     void Start()
     {
@@ -88,6 +90,7 @@ public class UIManager : MonoBehaviour
 
     public void NEWGAME()
     {
+		panelNewGame.SetActive(false);
 		gameStarted = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -288,20 +291,26 @@ public class UIManager : MonoBehaviour
 
 	}
 
-    public void SetDificil()
+    public void SetDificil(int dificil)
     {
-        if(PlayerPrefs.GetInt("dificil") > 0)
-        {
-            PlayerPrefs.SetInt("dificil", 0);
-            easyGame.text = "Original Mode";
-        }
-        else
-        {
-            easyGame.text = "Easy Mode";
-            PlayerPrefs.SetInt("dificil", 1);
-        }
-        Debug.Log(PlayerPrefs.GetInt("dificil"));
+        PlayerPrefs.SetInt("dificil", dificil);
+		NEWGAME();
     }
+
+	public void Menu(GameObject imagen)
+	{
+		foreach (GameObject menu in menus)
+		{
+			if(menu == imagen)
+			{
+				imagen.SetActive(!imagen.activeSelf) ;
+			}else{
+				menu.SetActive(false);
+			}
+		}
+	}
+
+
 }
 
 

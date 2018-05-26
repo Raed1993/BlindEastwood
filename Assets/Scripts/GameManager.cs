@@ -72,4 +72,9 @@ public class GameManager : MonoBehaviour {
         }
         EndGame("YOU WIN in " + minutes.ToString() + ":" + Mathf.RoundToInt(seconds).ToString() + "\n" +  mode);
 	}
+
+	public void ExitApp()
+	{
+		Application.Quit();
+	}
 }
